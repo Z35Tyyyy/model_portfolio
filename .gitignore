@@ -1,0 +1,21 @@
+.claude/settings.local.json
+
+# dependencies
+/node_modules
+
+# next.js
+/.next/
+/out/
+next-env.d.ts
+
+# windows reserved-name artifact
+NUL
+
+# misc
+.DS_Store
+*.pem
+npm-debug.log*
+.env*
+
+# typescript
+*.tsbuildinfo
