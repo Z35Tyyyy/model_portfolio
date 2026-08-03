@@ -90,7 +90,7 @@ export default function MaskImage({
           sizes={sizes}
           priority={priority}
           className="object-cover"
-          style={focus === "top" ? { objectPosition: "50% 12%" } : undefined}
+          style={focus === "top" ? { objectPosition: "50% 0%" } : undefined}
           {...(blur ? { placeholder: "blur" as const, blurDataURL: blur } : {})}
         />
       </div>

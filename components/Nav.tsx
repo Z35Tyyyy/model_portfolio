@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
 import { content } from "@/lib/content";
 
@@ -11,9 +12,14 @@ const LINKS = [
   { label: "Contact", href: "/#contact" },
 ];
 
-/** Hidden until the visitor scrolls past the hero; then a whisper of a nav. */
+/**
+ * On the home page: hidden until the visitor scrolls past the hero, then a
+ * whisper of a nav. On inner pages (galleries) it is always present.
+ */
 export default function Nav() {
-  const [visible, setVisible] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const pathname = usePathname();
+  const visible = scrolled || pathname !== "/";
 
   useEffect(() => {
     let ticking = false;
@@ -21,7 +27,7 @@ export default function Nav() {
       if (ticking) return;
       ticking = true;
       requestAnimationFrame(() => {
-        setVisible(window.scrollY > window.innerHeight * 0.55);
+        setScrolled(window.scrollY > window.innerHeight * 0.55);
         ticking = false;
       });
     };
