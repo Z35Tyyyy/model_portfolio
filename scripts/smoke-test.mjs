@@ -32,6 +32,15 @@ console.log("URL now:", page.url());
 const h1 = await page.evaluate(() => document.querySelector("h1")?.textContent ?? "(no h1)");
 console.log("h1:", h1);
 console.log("scrollY on gallery load:", await page.evaluate(() => Math.round(window.scrollY)));
+// Below-fold images must still be masked — if reveals fired against a stale
+// scroll offset they would all be visible (clip-path inset 0%).
+console.log(
+  "last mask clip-path (expect ~100% inset):",
+  await page.evaluate(() => {
+    const shells = document.querySelectorAll(".mask-shell");
+    return getComputedStyle(shells[shells.length - 1]).clipPath;
+  })
+);
 const bodyText = await page.evaluate(() => document.body.innerText.slice(0, 200));
 console.log("body starts:", JSON.stringify(bodyText));
 

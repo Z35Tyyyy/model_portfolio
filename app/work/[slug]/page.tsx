@@ -64,6 +64,7 @@ export default async function GalleryPage({ params }: GalleryPageProps) {
                 sizes={landscape ? "(min-width: 768px) 80vw, 100vw" : "(min-width: 768px) 60vh, 88vw"}
                 className={landscape ? "aspect-[16/10]" : "aspect-[4/5]"}
                 focus={item.focus}
+                priority={i === 0}
               />
             </div>
           );

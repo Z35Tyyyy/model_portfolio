@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useLayoutEffect, useRef } from "react";
 import { usePathname } from "next/navigation";
 import Lenis from "lenis";
 import { gsap, ScrollTrigger } from "@/lib/gsap";
@@ -46,8 +46,10 @@ export default function SmoothScroll() {
   }, []);
 
   // On route changes Lenis would otherwise keep its previous scroll position
-  // and drag the new page back to it — reset to the top (or the target hash).
-  useEffect(() => {
+  // and drag the new page back to it. This must be a LAYOUT effect: it has to
+  // run before the incoming page's passive effects create their ScrollTriggers,
+  // or every reveal computes against the stale offset and fires at once.
+  useLayoutEffect(() => {
     const lenis = lenisRef.current;
     if (!lenis) return;
     const hash = window.location.hash;
@@ -57,6 +59,10 @@ export default function SmoothScroll() {
     } else {
       lenis.scrollTo(0, { immediate: true, force: true });
     }
+  }, [pathname]);
+
+  // After the new page's triggers exist, recompute their positions once.
+  useEffect(() => {
     ScrollTrigger.refresh();
   }, [pathname]);
 
