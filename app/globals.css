@@ -1,0 +1,159 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ivory: #faf8f5;
+  --color-charcoal: #111111;
+  --color-ink: #1a1917;
+  --color-beige: #d8cfc0;
+  --color-sand: #e7dfd3;
+  --color-gold: #a8895b;
+  --color-smoke: #6f6a62;
+
+  --font-serif: var(--font-cormorant), "Cormorant Garamond", Georgia, serif;
+  --font-sans: var(--font-inter), "Inter", "Helvetica Neue", Arial, sans-serif;
+
+  --tracking-editorial: 0.32em;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+body {
+  background: var(--color-ivory);
+  color: var(--color-charcoal);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: var(--color-charcoal);
+  color: var(--color-ivory);
+}
+
+.dark-section ::selection {
+  background: var(--color-ivory);
+  color: var(--color-charcoal);
+}
+
+:focus-visible {
+  outline: 1px solid currentColor;
+  outline-offset: 6px;
+}
+
+/* ————— editorial helpers ————— */
+
+.font-serif-display {
+  font-family: var(--font-serif);
+  font-weight: 300;
+  line-height: 1.02;
+  letter-spacing: -0.01em;
+}
+
+.eyebrow {
+  font-family: var(--font-sans);
+  font-size: 0.625rem;
+  letter-spacing: var(--tracking-editorial);
+  text-transform: uppercase;
+}
+
+/* mask-reveal wrappers: each line sits in an overflow-hidden shell */
+.line-shell {
+  display: block;
+  overflow: hidden;
+}
+
+.line-inner {
+  display: block;
+  transform: translateY(0);
+  will-change: transform;
+}
+
+/* image mask reveal */
+.mask-shell {
+  overflow: hidden;
+  display: block;
+}
+
+/* film grain — a static SVG noise tile, barely there */
+.grain {
+  position: fixed;
+  inset: 0;
+  z-index: 90;
+  pointer-events: none;
+  opacity: 0.05;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 240px 240px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  [data-cursor] {
+    cursor: none;
+  }
+}
+
+/* understated links */
+.quiet-link {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 2px;
+}
+
+.quiet-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 1px;
+  width: 100%;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.quiet-link:hover::after,
+.quiet-link:focus-visible::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* soft image hover — 2% scale, nothing louder */
+.media-hover img,
+.media-hover video {
+  transition: transform 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.media-hover:hover img,
+.media-hover:hover video {
+  transform: scale(1.025);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .media-hover:hover img,
+  .media-hover:hover video {
+    transform: none;
+  }
+  .line-inner,
+  .mask-shell > * {
+    transform: none !important;
+    opacity: 1 !important;
+    clip-path: none !important;
+  }
+}
