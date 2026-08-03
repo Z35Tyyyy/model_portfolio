@@ -11,6 +11,10 @@ next-env.d.ts
 # windows reserved-name artifact
 NUL
 
+# media stages locally, ships via Cloudinary (npm run cloudinary)
+/public/images/
+/public/videos/
+
 # misc
 .DS_Store
 *.pem

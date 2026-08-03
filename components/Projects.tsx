@@ -1,3 +1,4 @@
+import Link from "next/link";
 import MaskImage from "@/components/MaskImage";
 import { content, type Project } from "@/lib/content";
 
@@ -15,12 +16,13 @@ export default function Projects() {
       <ul className="space-y-28 md:space-y-44">
         {projects.map((project, i) => {
           const landscape = project.orientation === "landscape";
-          return (
-          <li key={project.name}>
+          const figure = (
             <figure
               data-cursor
               className={`group media-hover relative mx-auto ${
-                landscape ? "w-[92vw] max-w-[1600px]" : "w-[88vw] max-w-[560px] md:w-[62vh] md:max-w-none"
+                landscape
+                  ? "w-[92vw] max-w-[1600px]"
+                  : "w-[88vw] max-w-[560px] md:w-[62vh] md:max-w-none"
               }`}
             >
               <MaskImage
@@ -28,6 +30,7 @@ export default function Projects() {
                 alt={project.alt}
                 sizes={landscape ? "92vw" : "(min-width: 768px) 62vh, 88vw"}
                 className={landscape ? "aspect-[16/10]" : "aspect-[4/5]"}
+                focus={project.focus}
               />
               <figcaption
                 className="pointer-events-none absolute bottom-0 left-0 z-10 p-8 text-ivory transition-all duration-700 ease-out md:translate-y-2 md:p-12 md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 md:group-focus-within:translate-y-0 md:group-focus-within:opacity-100"
@@ -39,10 +42,28 @@ export default function Projects() {
                 <span className="font-serif-display mt-3 block text-4xl md:text-5xl">
                   {project.name}
                 </span>
-                <span className="eyebrow mt-4 block text-ivory/70">{project.year}</span>
+                <span className="eyebrow mt-4 block text-ivory/70">
+                  {project.year}
+                  {project.gallery && <span className="ml-6">View gallery —</span>}
+                </span>
               </figcaption>
             </figure>
-          </li>
+          );
+
+          return (
+            <li key={project.name}>
+              {project.gallery ? (
+                <Link
+                  href={`/work/${project.gallery}`}
+                  aria-label={`${project.name} — view gallery`}
+                  className="block"
+                >
+                  {figure}
+                </Link>
+              ) : (
+                figure
+              )}
+            </li>
           );
         })}
       </ul>

@@ -1,19 +1,25 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
 import { content } from "@/lib/content";
 
 const LINKS = [
-  { label: "About", href: "#about" },
-  { label: "Projects", href: "#projects" },
-  { label: "Films", href: "#films" },
-  { label: "Contact", href: "#contact" },
+  { label: "About", href: "/#about" },
+  { label: "Projects", href: "/#projects" },
+  { label: "Films", href: "/#films" },
+  { label: "Contact", href: "/#contact" },
 ];
 
-/** Hidden until the visitor scrolls past the hero; then a whisper of a nav. */
+/**
+ * On the home page: hidden until the visitor scrolls past the hero, then a
+ * whisper of a nav. On inner pages (galleries) it is always present.
+ */
 export default function Nav() {
-  const [visible, setVisible] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const pathname = usePathname();
+  const visible = scrolled || pathname !== "/";
 
   useEffect(() => {
     let ticking = false;
@@ -21,7 +27,7 @@ export default function Nav() {
       if (ticking) return;
       ticking = true;
       requestAnimationFrame(() => {
-        setVisible(window.scrollY > window.innerHeight * 0.55);
+        setScrolled(window.scrollY > window.innerHeight * 0.55);
         ticking = false;
       });
     };
@@ -43,7 +49,7 @@ export default function Nav() {
         aria-label="Primary"
         className="flex items-center justify-between px-6 py-6 text-ivory sm:px-10 md:px-16"
       >
-        <a href="#top" className="eyebrow quiet-link py-2 tracking-[0.4em]">
+        <a href="/#top" className="eyebrow quiet-link py-2 tracking-[0.4em]">
           {content.name}
         </a>
         <ul className="flex items-center gap-5 sm:gap-10">

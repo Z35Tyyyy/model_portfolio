@@ -13,6 +13,8 @@ interface MaskImageProps {
   priority?: boolean;
   /** Subtle scroll parallax on the image inside its mask. */
   parallax?: boolean;
+  /** Crop bias — "top" keeps faces in frame for high-subject photos. */
+  focus?: "top";
 }
 
 /** Image that reveals through a mask on scroll, settling from a gentle overscale. */
@@ -23,6 +25,7 @@ export default function MaskImage({
   className = "",
   priority = false,
   parallax = true,
+  focus,
 }: MaskImageProps) {
   const shellRef = useRef<HTMLDivElement>(null);
   const innerRef = useRef<HTMLDivElement>(null);
@@ -54,7 +57,7 @@ export default function MaskImage({
           scrollTrigger: { trigger: shell, start: "top 85%", once: true },
         }
       );
-      if (parallax) {
+      if (parallax && !focus) {
         gsap.fromTo(
           inner,
           { yPercent: -4 },
@@ -73,7 +76,7 @@ export default function MaskImage({
     }, shell);
 
     return () => ctx.revert();
-  }, [parallax]);
+  }, [parallax, focus]);
 
   const blur = getBlur(src);
 
@@ -87,6 +90,7 @@ export default function MaskImage({
           sizes={sizes}
           priority={priority}
           className="object-cover"
+          style={focus === "top" ? { objectPosition: "50% 0%" } : undefined}
           {...(blur ? { placeholder: "blur" as const, blurDataURL: blur } : {})}
         />
       </div>

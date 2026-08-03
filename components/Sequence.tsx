@@ -9,25 +9,29 @@ import { getBlur } from "@/lib/blur";
 /**
  * The closing sequence — the section pins while each frame dissolves over the
  * last, very slowly. Reduced motion sees the first frame, still.
+ *
+ * The pin target is an inner wrapper, never the section itself: ScrollTrigger
+ * reparents the pinned element into a spacer div, and pinning a page-root
+ * element makes React's removeChild throw on route changes.
  */
 export default function Sequence() {
-  const sectionRef = useRef<HTMLElement>(null);
+  const pinRef = useRef<HTMLDivElement>(null);
   const frames = content.sequence as Still[];
 
   useEffect(() => {
-    const section = sectionRef.current;
-    if (!section) return;
+    const pinEl = pinRef.current;
+    if (!pinEl) return;
 
     const mm = gsap.matchMedia();
     mm.add("(prefers-reduced-motion: no-preference)", () => {
-      const imgs = section.querySelectorAll<HTMLElement>(".seq-frame");
+      const imgs = pinEl.querySelectorAll<HTMLElement>(".seq-frame");
       const tl = gsap.timeline({
         scrollTrigger: {
-          trigger: section,
+          trigger: pinEl,
           start: "top top",
           end: `+=${frames.length * 110}%`,
           scrub: 1.2,
-          pin: true,
+          pin: pinEl,
         },
       });
       imgs.forEach((img, i) => {
@@ -41,30 +45,31 @@ export default function Sequence() {
   }, [frames.length]);
 
   return (
-    <section
-      ref={sectionRef}
-      aria-label="Closing image sequence"
-      className="flex h-svh items-center justify-center overflow-hidden bg-ivory"
-    >
-      <div className="relative aspect-[4/5] h-[68vh] max-w-[88vw]">
-        {frames.map((frame, i) => {
-          const blur = getBlur(frame.image);
-          return (
-            <div
-              key={frame.image}
-              className={`seq-frame absolute inset-0 ${i === 0 ? "" : "opacity-0"}`}
-            >
-              <Image
-                src={frame.image}
-                alt={frame.alt}
-                fill
-                sizes="(min-width: 768px) 55vh, 88vw"
-                className="object-cover"
-                {...(blur ? { placeholder: "blur" as const, blurDataURL: blur } : {})}
-              />
-            </div>
-          );
-        })}
+    <section aria-label="Closing image sequence" className="bg-ivory">
+      <div
+        ref={pinRef}
+        className="flex h-svh items-center justify-center overflow-hidden"
+      >
+        <div className="relative aspect-[4/5] h-[68vh] max-w-[88vw]">
+          {frames.map((frame, i) => {
+            const blur = getBlur(frame.image);
+            return (
+              <div
+                key={frame.image}
+                className={`seq-frame absolute inset-0 ${i === 0 ? "" : "opacity-0"}`}
+              >
+                <Image
+                  src={frame.image}
+                  alt={frame.alt}
+                  fill
+                  sizes="(min-width: 768px) 55vh, 88vw"
+                  className="object-cover"
+                  {...(blur ? { placeholder: "blur" as const, blurDataURL: blur } : {})}
+                />
+              </div>
+            );
+          })}
+        </div>
       </div>
     </section>
   );
