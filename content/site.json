@@ -1,0 +1,211 @@
+{
+  "name": "PALAK",
+  "roles": [
+    "Model",
+    "Creator",
+    "UGC"
+  ],
+  "seo": {
+    "title": "PALAK — Model · Creator · UGC",
+    "description": "The editorial portfolio of Palak — fashion model, creator and UGC talent. Bridal, western, editorial, commercial and lifestyle work."
+  },
+  "opening": [
+    "Beauty is not seen.",
+    "It is remembered."
+  ],
+  "hero": {
+    "image": "https://res.cloudinary.com/dqned4qn/image/upload/f_auto,q_auto/v1785762821/palak-portfolio/hero.jpg?_a=BAMAPqRk0",
+    "alt": "Palak, black and white over-the-shoulder portrait"
+  },
+  "story": [
+    {
+      "image": "https://res.cloudinary.com/dqned4qn/image/upload/f_auto,q_auto/v1785762856/palak-portfolio/story-01.jpg?_a=BAMAPqRk0",
+      "alt": "Palak in red bridal couture, eyes closed, gold jewellery",
+      "lines": [
+        "Every frame",
+        "holds a different story."
+      ]
+    },
+    {
+      "image": "https://res.cloudinary.com/dqned4qn/image/upload/f_auto,q_auto/v1785762857/palak-portfolio/story-02.jpg?_a=BAMAPqRk0",
+      "alt": "Black and white portrait of Palak in streaked window light",
+      "lines": [
+        "Light is a language.",
+        "I learned to speak it."
+      ]
+    }
+  ],
+  "statements": [
+    {
+      "lines": [
+        "I don't pose.",
+        "I perform."
+      ],
+      "theme": "dark"
+    },
+    {
+      "lines": [
+        "Stillness",
+        "can speak."
+      ],
+      "theme": "light"
+    }
+  ],
+  "about": {
+    "heading": "About",
+    "image": "https://res.cloudinary.com/dqned4qn/image/upload/f_auto,q_auto/v1785762812/palak-portfolio/about.jpg?_a=BAMAPqRk0",
+    "alt": "Black and white close portrait of Palak",
+    "paragraph": "Palak works at the meeting point of fashion and film — a model whose frames read like scenes, not poses. From bridal couture to western editorials, from campaign stills to UGC for brands like Jovees Herbal, Brillare and Sotrue Beauty, her work carries the same signature: restraint, intention, and a quiet command of the camera."
+  },
+  "projects": [
+    {
+      "name": "Bridal",
+      "category": "Bridal",
+      "campaign": "Scarlet Bride",
+      "year": "2026",
+      "description": "Red couture, gold light, a slow ceremony of a shoot.",
+      "image": "https://res.cloudinary.com/dqned4qn/image/upload/f_auto,q_auto/v1785762825/palak-portfolio/project-bridal.jpg?_a=BAMAPqRk0",
+      "alt": "Palak in red bridal lehenga looking over her shoulder",
+      "orientation": "portrait"
+    },
+    {
+      "name": "Western",
+      "category": "Western",
+      "campaign": "City Evenings",
+      "year": "2026",
+      "description": "A powder-blue dress and the hum of the city.",
+      "image": "https://res.cloudinary.com/dqned4qn/image/upload/f_auto,q_auto/v1785762842/palak-portfolio/project-western.jpg?_a=BAMAPqRk0",
+      "alt": "Palak in a powder-blue mini dress at a restaurant",
+      "orientation": "portrait"
+    },
+    {
+      "name": "Editorial",
+      "category": "Editorial",
+      "campaign": "Noir on Red",
+      "year": "2025",
+      "description": "Birdcage veil, lace gloves, a corridor of red.",
+      "image": "https://res.cloudinary.com/dqned4qn/image/upload/f_auto,q_auto/v1785762834/palak-portfolio/project-editorial.jpg?_a=BAMAPqRk0",
+      "alt": "Palak in black with lace gloves against a red corridor",
+      "orientation": "portrait"
+    },
+    {
+      "name": "Commercial",
+      "category": "Commercial",
+      "campaign": "Flipkart Glam Up",
+      "year": "2026",
+      "description": "On set for the beauty carnival.",
+      "image": "https://res.cloudinary.com/dqned4qn/image/upload/f_auto,q_auto/v1785762829/palak-portfolio/project-commercial.jpg?_a=BAMAPqRk0",
+      "alt": "Palak at the Flipkart Glam Up 2026 event",
+      "orientation": "portrait"
+    },
+    {
+      "name": "Lifestyle",
+      "category": "Lifestyle",
+      "campaign": "Slow Afternoons",
+      "year": "2026",
+      "description": "Dappled light, black and white, off duty.",
+      "image": "https://res.cloudinary.com/dqned4qn/image/upload/f_auto,q_auto/v1785762838/palak-portfolio/project-lifestyle.jpg?_a=BAMAPqRk0",
+      "alt": "Black and white photograph of Palak in dappled afternoon light",
+      "orientation": "landscape"
+    }
+  ],
+  "ugc": {
+    "heading": "UGC",
+    "subheading": "Content that feels found, not made.",
+    "items": [
+      {
+        "title": "Astrofume",
+        "video": "https://res.cloudinary.com/dqned4qn/video/upload/q_auto/v1785762981/palak-portfolio/astrofume.mp4?_a=BAMAPqRk0",
+        "poster": "https://res.cloudinary.com/dqned4qn/image/upload/f_auto,q_auto/v1785762859/palak-portfolio/ugc-astrofume.jpg?_a=BAMAPqRk0"
+      },
+      {
+        "title": "Brillare",
+        "video": "https://res.cloudinary.com/dqned4qn/video/upload/q_auto/v1785763112/palak-portfolio/brillare.mp4?_a=BAMAPqRk0",
+        "poster": "https://res.cloudinary.com/dqned4qn/image/upload/f_auto,q_auto/v1785762860/palak-portfolio/ugc-brillare.jpg?_a=BAMAPqRk0"
+      },
+      {
+        "title": "Dermabay",
+        "video": "https://res.cloudinary.com/dqned4qn/video/upload/q_auto/v1785763152/palak-portfolio/dermabay.mp4?_a=BAMAPqRk0",
+        "poster": "https://res.cloudinary.com/dqned4qn/image/upload/f_auto,q_auto/v1785762861/palak-portfolio/ugc-dermabay.jpg?_a=BAMAPqRk0"
+      },
+      {
+        "title": "Grefi",
+        "video": "https://res.cloudinary.com/dqned4qn/video/upload/q_auto/v1785763235/palak-portfolio/grefi.mp4?_a=BAMAPqRk0",
+        "poster": "https://res.cloudinary.com/dqned4qn/image/upload/f_auto,q_auto/v1785762862/palak-portfolio/ugc-grefi.jpg?_a=BAMAPqRk0"
+      },
+      {
+        "title": "Jovees Herbal — I",
+        "video": "https://res.cloudinary.com/dqned4qn/video/upload/q_auto/v1785763349/palak-portfolio/jovees-1.mp4?_a=BAMAPqRk0",
+        "poster": "https://res.cloudinary.com/dqned4qn/image/upload/f_auto,q_auto/v1785762863/palak-portfolio/ugc-jovees-1.jpg?_a=BAMAPqRk0"
+      },
+      {
+        "title": "Jovees Herbal — II",
+        "video": "https://res.cloudinary.com/dqned4qn/video/upload/q_auto/v1785763435/palak-portfolio/jovees-2.mp4?_a=BAMAPqRk0",
+        "poster": "https://res.cloudinary.com/dqned4qn/image/upload/f_auto,q_auto/v1785762865/palak-portfolio/ugc-jovees-2.jpg?_a=BAMAPqRk0"
+      },
+      {
+        "title": "Jovees Herbal — III",
+        "video": "https://res.cloudinary.com/dqned4qn/video/upload/q_auto/v1785763516/palak-portfolio/jovees-3.mp4?_a=BAMAPqRk0",
+        "poster": "https://res.cloudinary.com/dqned4qn/image/upload/f_auto,q_auto/v1785762867/palak-portfolio/ugc-jovees-3.jpg?_a=BAMAPqRk0"
+      },
+      {
+        "title": "Pureus Herbals",
+        "video": "https://res.cloudinary.com/dqned4qn/video/upload/q_auto/v1785763574/palak-portfolio/pureus.mp4?_a=BAMAPqRk0",
+        "poster": "https://res.cloudinary.com/dqned4qn/image/upload/f_auto,q_auto/v1785762868/palak-portfolio/ugc-pureus.jpg?_a=BAMAPqRk0"
+      },
+      {
+        "title": "Sotrue Beauty",
+        "video": "https://res.cloudinary.com/dqned4qn/video/upload/q_auto/v1785763595/palak-portfolio/sotrue.mp4?_a=BAMAPqRk0",
+        "poster": "https://res.cloudinary.com/dqned4qn/image/upload/f_auto,q_auto/v1785762869/palak-portfolio/ugc-sotrue.jpg?_a=BAMAPqRk0"
+      }
+    ]
+  },
+  "film": {
+    "heading": "Introduction",
+    "video": "",
+    "poster": "https://res.cloudinary.com/dqned4qn/image/upload/f_auto,q_auto/v1785762813/palak-portfolio/film-poster.jpg?_a=BAMAPqRk0",
+    "stills": [
+      {
+        "image": "https://res.cloudinary.com/dqned4qn/image/upload/f_auto,q_auto/v1785762814/palak-portfolio/film-still-01.jpg?_a=BAMAPqRk0",
+        "alt": "Palak in a pink lehenga against the city skyline"
+      },
+      {
+        "image": "https://res.cloudinary.com/dqned4qn/image/upload/f_auto,q_auto/v1785762815/palak-portfolio/film-still-02.jpg?_a=BAMAPqRk0",
+        "alt": "Palak in a lilac lehenga"
+      },
+      {
+        "image": "https://res.cloudinary.com/dqned4qn/image/upload/f_auto,q_auto/v1785762818/palak-portfolio/film-still-03.jpg?_a=BAMAPqRk0",
+        "alt": "Palak in orange bridal couture"
+      }
+    ]
+  },
+  "quotes": [
+    "The camera remembers what words cannot.",
+    "Fashion is movement.",
+    "The most powerful expression is effortless."
+  ],
+  "sequence": [
+    {
+      "image": "https://res.cloudinary.com/dqned4qn/image/upload/f_auto,q_auto/v1785762845/palak-portfolio/seq-01.jpg?_a=BAMAPqRk0",
+      "alt": "Palak mid-twirl in a red lehenga"
+    },
+    {
+      "image": "https://res.cloudinary.com/dqned4qn/image/upload/f_auto,q_auto/v1785762849/palak-portfolio/seq-02.jpg?_a=BAMAPqRk0",
+      "alt": "Palak in traditional gold bridal jewellery"
+    },
+    {
+      "image": "https://res.cloudinary.com/dqned4qn/image/upload/f_auto,q_auto/v1785762852/palak-portfolio/seq-03.jpg?_a=BAMAPqRk0",
+      "alt": "Palak in black, retro glam profile"
+    },
+    {
+      "image": "https://res.cloudinary.com/dqned4qn/image/upload/f_auto,q_auto/v1785762853/palak-portfolio/seq-04.jpg?_a=BAMAPqRk0",
+      "alt": "Black and white portrait of Palak in a slip dress"
+    }
+  ],
+  "contact": {
+    "line": "Let's create something timeless.",
+    "instagram": "https://www.instagram.com/notpaalak_srivastava",
+    "email": "palaksrivastava2207@gmail.com",
+    "pdf": "/portfolio.pdf"
+  }
+}
