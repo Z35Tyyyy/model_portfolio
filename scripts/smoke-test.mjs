@@ -31,11 +31,12 @@ await new Promise((r) => setTimeout(r, 5000));
 console.log("URL now:", page.url());
 const h1 = await page.evaluate(() => document.querySelector("h1")?.textContent ?? "(no h1)");
 console.log("h1:", h1);
+console.log("scrollY on gallery load:", await page.evaluate(() => Math.round(window.scrollY)));
 const bodyText = await page.evaluate(() => document.body.innerText.slice(0, 200));
 console.log("body starts:", JSON.stringify(bodyText));
 
 console.log("— back home, then to western gallery —");
-await page.click('article a[href="/#projects"]');
+await page.click('nav a[href="/#projects"]');
 await new Promise((r) => setTimeout(r, 4000));
 console.log("URL after back:", page.url());
 

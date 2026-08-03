@@ -31,10 +31,7 @@ export default async function GalleryPage({ params }: GalleryPageProps) {
   return (
     <article className="px-6 pb-40 pt-36 sm:px-10 md:px-16 md:pt-48">
       <header className="mx-auto max-w-[1440px]">
-        <Link href="/#projects" className="eyebrow quiet-link text-smoke">
-          ← {content.name}
-        </Link>
-        <h1 className="font-serif-display mt-10 text-6xl sm:text-7xl md:text-8xl">
+        <h1 className="font-serif-display text-6xl sm:text-7xl md:text-8xl">
           {gallery.title}
         </h1>
         {gallery.blurb && (
