@@ -48,6 +48,14 @@ export default function About() {
           <p className="font-serif-display text-2xl leading-[1.45] sm:text-3xl">
             {content.about.paragraph}
           </p>
+          <dl className="mt-14 flex gap-16">
+            {content.about.specs.map((spec) => (
+              <div key={spec.label}>
+                <dt className="eyebrow text-smoke">{spec.label}</dt>
+                <dd className="font-serif-display mt-3 text-3xl">{spec.value}</dd>
+              </div>
+            ))}
+          </dl>
         </div>
       </div>
     </section>

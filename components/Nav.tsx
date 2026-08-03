@@ -5,10 +5,10 @@ import { motion } from "framer-motion";
 import { content } from "@/lib/content";
 
 const LINKS = [
-  { label: "About", href: "#about" },
-  { label: "Projects", href: "#projects" },
-  { label: "Films", href: "#films" },
-  { label: "Contact", href: "#contact" },
+  { label: "About", href: "/#about" },
+  { label: "Projects", href: "/#projects" },
+  { label: "Films", href: "/#films" },
+  { label: "Contact", href: "/#contact" },
 ];
 
 /** Hidden until the visitor scrolls past the hero; then a whisper of a nav. */
@@ -43,7 +43,7 @@ export default function Nav() {
         aria-label="Primary"
         className="flex items-center justify-between px-6 py-6 text-ivory sm:px-10 md:px-16"
       >
-        <a href="#top" className="eyebrow quiet-link py-2 tracking-[0.4em]">
+        <a href="/#top" className="eyebrow quiet-link py-2 tracking-[0.4em]">
           {content.name}
         </a>
         <ul className="flex items-center gap-5 sm:gap-10">

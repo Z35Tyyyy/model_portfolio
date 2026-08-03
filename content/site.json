@@ -1,11 +1,18 @@
 {
   "name": "PALAK",
-  "roles": ["Model", "Creator", "UGC"],
+  "roles": [
+    "Model",
+    "Creator",
+    "UGC"
+  ],
   "seo": {
     "title": "PALAK — Model · Creator · UGC",
     "description": "PALAK — my editorial portfolio. Fashion model, creator and UGC talent: bridal, western, editorial, commercial and lifestyle work."
   },
-  "opening": ["Beauty is not seen.", "It is remembered."],
+  "opening": [
+    "Beauty is not seen.",
+    "It is remembered."
+  ],
   "hero": {
     "image": "https://res.cloudinary.com/dqned4qn/image/upload/f_auto,q_auto/v1785762821/palak-portfolio/hero.jpg?_a=BAMAPqRk0",
     "alt": "Black and white over-the-shoulder portrait of me"
@@ -14,23 +21,51 @@
     {
       "image": "https://res.cloudinary.com/dqned4qn/image/upload/f_auto,q_auto/v1785762856/palak-portfolio/story-01.jpg?_a=BAMAPqRk0",
       "alt": "Me in red bridal couture, eyes closed, gold jewellery",
-      "lines": ["Every frame", "holds a different story."]
+      "lines": [
+        "Every frame",
+        "holds a different story."
+      ]
     },
     {
       "image": "https://res.cloudinary.com/dqned4qn/image/upload/f_auto,q_auto/v1785762857/palak-portfolio/story-02.jpg?_a=BAMAPqRk0",
       "alt": "Black and white portrait of me in streaked window light",
-      "lines": ["Light is a language.", "I learned to speak it."]
+      "lines": [
+        "Light is a language.",
+        "I learned to speak it."
+      ]
     }
   ],
   "statements": [
-    { "lines": ["I don't pose.", "I perform."], "theme": "dark" },
-    { "lines": ["Stillness", "can speak."], "theme": "light" }
+    {
+      "lines": [
+        "I don't pose.",
+        "I perform."
+      ],
+      "theme": "dark"
+    },
+    {
+      "lines": [
+        "Stillness",
+        "can speak."
+      ],
+      "theme": "light"
+    }
   ],
   "about": {
     "heading": "About",
     "image": "https://res.cloudinary.com/dqned4qn/image/upload/f_auto,q_auto/v1785762812/palak-portfolio/about.jpg?_a=BAMAPqRk0",
     "alt": "Black and white close portrait of me",
-    "paragraph": "I work where fashion meets film — my frames read like scenes, not poses. From bridal couture to western editorials, from campaign stills to UGC for brands like Jovees Herbal, Brillare and Sotrue Beauty, everything I make carries the same signature: restraint, intention, and a quiet command of the camera."
+    "paragraph": "I work where fashion meets film — my frames read like scenes, not poses. From bridal couture to western editorials, from campaign stills to UGC for brands like Jovees Herbal, Brillare and Sotrue Beauty, everything I make carries the same signature: restraint, intention, and a quiet command of the camera.",
+    "specs": [
+      {
+        "label": "Age",
+        "value": "21"
+      },
+      {
+        "label": "Height",
+        "value": "5'0\""
+      }
+    ]
   },
   "projects": [
     {
@@ -41,7 +76,8 @@
       "description": "Red couture, gold light, a slow ceremony of a shoot.",
       "image": "https://res.cloudinary.com/dqned4qn/image/upload/f_auto,q_auto/v1785762825/palak-portfolio/project-bridal.jpg?_a=BAMAPqRk0",
       "alt": "Me in a red bridal lehenga, looking over my shoulder",
-      "orientation": "portrait"
+      "orientation": "portrait",
+      "gallery": "bridal"
     },
     {
       "name": "Western",
@@ -51,7 +87,9 @@
       "description": "A powder-blue dress and the hum of the city.",
       "image": "https://res.cloudinary.com/dqned4qn/image/upload/f_auto,q_auto/v1785762842/palak-portfolio/project-western.jpg?_a=BAMAPqRk0",
       "alt": "Me in a powder-blue mini dress at a restaurant",
-      "orientation": "portrait"
+      "orientation": "portrait",
+      "focus": "top",
+      "gallery": "western"
     },
     {
       "name": "Editorial",
@@ -61,7 +99,8 @@
       "description": "Birdcage veil, lace gloves, a corridor of red.",
       "image": "https://res.cloudinary.com/dqned4qn/image/upload/f_auto,q_auto/v1785762834/palak-portfolio/project-editorial.jpg?_a=BAMAPqRk0",
       "alt": "Me in black with lace gloves against a red corridor",
-      "orientation": "portrait"
+      "orientation": "portrait",
+      "gallery": "editorial"
     },
     {
       "name": "Commercial",
@@ -81,9 +120,123 @@
       "description": "Dappled light, black and white, off duty.",
       "image": "https://res.cloudinary.com/dqned4qn/image/upload/f_auto,q_auto/v1785762838/palak-portfolio/project-lifestyle.jpg?_a=BAMAPqRk0",
       "alt": "Black and white photograph of me in dappled afternoon light",
-      "orientation": "landscape"
+      "orientation": "landscape",
+      "gallery": "lifestyle"
     }
   ],
+  "galleries": {
+    "bridal": {
+      "title": "Bridal",
+      "blurb": "Couture, ceremony, and the colours I grew up with.",
+      "items": [
+        {
+          "image": "https://res.cloudinary.com/dqned4qn/image/upload/f_auto,q_auto/v1785775057/palak-portfolio/gallery-bridal-01.jpg?_a=BAMAPqRk0",
+          "alt": "Bridal close portrait in gold matha patti and red bangles"
+        },
+        {
+          "image": "https://res.cloudinary.com/dqned4qn/image/upload/f_auto,q_auto/v1785775060/palak-portfolio/gallery-bridal-02.jpg?_a=BAMAPqRk0",
+          "alt": "Reclining in an embroidered bridal lehenga in low light"
+        },
+        {
+          "image": "https://res.cloudinary.com/dqned4qn/image/upload/f_auto,q_auto/v1785762825/palak-portfolio/project-bridal.jpg?_a=BAMAPqRk0",
+          "alt": "Me in a red bridal lehenga, looking over my shoulder"
+        },
+        {
+          "image": "https://res.cloudinary.com/dqned4qn/image/upload/f_auto,q_auto/v1785762856/palak-portfolio/story-01.jpg?_a=BAMAPqRk0",
+          "alt": "Red bridal couture, eyes closed, gold jewellery"
+        },
+        {
+          "image": "https://res.cloudinary.com/dqned4qn/image/upload/f_auto,q_auto/v1785762845/palak-portfolio/seq-01.jpg?_a=BAMAPqRk0",
+          "alt": "Mid-twirl in a red lehenga"
+        },
+        {
+          "image": "https://res.cloudinary.com/dqned4qn/image/upload/f_auto,q_auto/v1785762849/palak-portfolio/seq-02.jpg?_a=BAMAPqRk0",
+          "alt": "Traditional gold bridal jewellery"
+        },
+        {
+          "image": "https://res.cloudinary.com/dqned4qn/image/upload/f_auto,q_auto/v1785762818/palak-portfolio/film-still-03.jpg?_a=BAMAPqRk0",
+          "alt": "Orange bridal couture portrait"
+        },
+        {
+          "image": "https://res.cloudinary.com/dqned4qn/image/upload/f_auto,q_auto/v1785762814/palak-portfolio/film-still-01.jpg?_a=BAMAPqRk0",
+          "alt": "Pink lehenga against the city skyline"
+        }
+      ]
+    },
+    "western": {
+      "title": "Western",
+      "blurb": "Dresses, denim, and city light.",
+      "items": [
+        {
+          "image": "https://res.cloudinary.com/dqned4qn/image/upload/f_auto,q_auto/v1785762842/palak-portfolio/project-western.jpg?_a=BAMAPqRk0",
+          "alt": "Powder-blue mini dress at a restaurant",
+          "focus": "top"
+        },
+        {
+          "image": "https://res.cloudinary.com/dqned4qn/image/upload/f_auto,q_auto/v1785762829/palak-portfolio/project-commercial.jpg?_a=BAMAPqRk0",
+          "alt": "At the Flipkart Glam Up 2026 event"
+        },
+        {
+          "image": "https://res.cloudinary.com/dqned4qn/image/upload/f_auto,q_auto/v1785762853/palak-portfolio/seq-04.jpg?_a=BAMAPqRk0",
+          "alt": "Black and white portrait in a slip dress"
+        }
+      ]
+    },
+    "editorial": {
+      "title": "Editorial",
+      "blurb": "Shot for the page, composed for the eye.",
+      "items": [
+        {
+          "image": "https://res.cloudinary.com/dqned4qn/image/upload/f_auto,q_auto/v1785762834/palak-portfolio/project-editorial.jpg?_a=BAMAPqRk0",
+          "alt": "Black outfit with lace gloves against a red corridor"
+        },
+        {
+          "image": "https://res.cloudinary.com/dqned4qn/image/upload/f_auto,q_auto/v1785775061/palak-portfolio/gallery-editorial-01.jpg?_a=BAMAPqRk0",
+          "alt": "Birdcage veil and red lips, retro glam"
+        },
+        {
+          "image": "https://res.cloudinary.com/dqned4qn/image/upload/f_auto,q_auto/v1785775062/palak-portfolio/gallery-editorial-02.jpg?_a=BAMAPqRk0",
+          "alt": "Red room editorial, glam makeup"
+        },
+        {
+          "image": "https://res.cloudinary.com/dqned4qn/image/upload/f_auto,q_auto/v1785762852/palak-portfolio/seq-03.jpg?_a=BAMAPqRk0",
+          "alt": "Retro glam profile in black"
+        },
+        {
+          "image": "https://res.cloudinary.com/dqned4qn/image/upload/f_auto,q_auto/v1785775063/palak-portfolio/gallery-editorial-03.jpg?_a=BAMAPqRk0",
+          "alt": "Statement necklace in a red corridor"
+        },
+        {
+          "image": "https://res.cloudinary.com/dqned4qn/image/upload/f_auto,q_auto/v1785775067/palak-portfolio/gallery-editorial-04.jpg?_a=BAMAPqRk0",
+          "alt": "Lace gloves at the chin, red room"
+        },
+        {
+          "image": "https://res.cloudinary.com/dqned4qn/image/upload/f_auto,q_auto/v1785762857/palak-portfolio/story-02.jpg?_a=BAMAPqRk0",
+          "alt": "Black and white portrait in streaked window light"
+        }
+      ]
+    },
+    "lifestyle": {
+      "title": "Lifestyle",
+      "blurb": "Off duty, unhurried, unmistakable.",
+      "items": [
+        {
+          "image": "https://res.cloudinary.com/dqned4qn/image/upload/f_auto,q_auto/v1785762838/palak-portfolio/project-lifestyle.jpg?_a=BAMAPqRk0",
+          "alt": "Dappled afternoon light, black and white",
+          "orientation": "landscape"
+        },
+        {
+          "image": "https://res.cloudinary.com/dqned4qn/image/upload/f_auto,q_auto/v1785762813/palak-portfolio/film-poster.jpg?_a=BAMAPqRk0",
+          "alt": "Beanbag portrait in black and white",
+          "orientation": "landscape"
+        },
+        {
+          "image": "https://res.cloudinary.com/dqned4qn/image/upload/f_auto,q_auto/v1785762812/palak-portfolio/about.jpg?_a=BAMAPqRk0",
+          "alt": "Black and white close portrait"
+        }
+      ]
+    }
+  },
   "ugc": {
     "heading": "UGC",
     "subheading": "Content that feels found, not made.",

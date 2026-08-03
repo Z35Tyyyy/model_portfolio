@@ -3,14 +3,18 @@
  * Run after adding or swapping any image:  npm run blur
  */
 import sharp from "sharp";
-import { readdir, writeFile } from "node:fs/promises";
+import { readdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 
 const DIR = path.resolve("public/images");
 const OUT = path.resolve("lib/blur-map.json");
 
 const files = (await readdir(DIR)).filter((f) => /\.(jpe?g|png|webp)$/i.test(f));
-const map = {};
+// Merge into the existing map so entries for CDN-migrated files survive.
+let map = {};
+try {
+  map = JSON.parse(await readFile(OUT, "utf8"));
+} catch {}
 for (const f of files.sort()) {
   const tiny = await sharp(path.join(DIR, f)).resize(12).jpeg({ quality: 40 }).toBuffer();
   // Keyed by bare filename so lookups survive a move to CDN-hosted URLs.

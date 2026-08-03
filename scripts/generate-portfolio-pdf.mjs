@@ -44,10 +44,12 @@ function bg(color) {
   doc.rect(0, 0, A4.w, A4.h).fill(color);
 }
 
-function coverImage(buf, x, y, w, h) {
+function coverImage(buf, x, y, w, h, valign = "center") {
   doc.save();
   doc.rect(x, y, w, h).clip();
-  doc.image(buf, x, y, { cover: [w, h], align: "center", valign: "center" });
+  const opts = { cover: [w, h], align: "center" };
+  if (valign !== "top") opts.valign = valign; // omitting valign anchors the crop to the top
+  doc.image(buf, x, y, opts);
   doc.restore();
 }
 
@@ -110,6 +112,12 @@ doc
   .fontSize(13.5)
   .fillColor(CHARCOAL)
   .text(site.about.paragraph, ax, A4.h * 0.3 + 44, { width: aw, lineGap: 6 });
+let specY = doc.y + 36;
+for (const spec of site.about.specs ?? []) {
+  eyebrow(spec.label, ax, specY);
+  doc.font("serif-reg").fontSize(17).fillColor(CHARCOAL).text(spec.value, ax, specY + 13);
+  specY += 58;
+}
 
 // ————— Projects —————
 let idx = 0;
@@ -119,7 +127,7 @@ for (const project of site.projects) {
   const buf = await fetchImage(project.image, 1200);
   doc.addPage();
   bg(IVORY);
-  coverImage(buf, 0, 0, A4.w, A4.h * 0.76);
+  coverImage(buf, 0, 0, A4.w, A4.h * 0.76, project.focus === "top" ? "top" : "center");
   const py = A4.h * 0.76 + 34;
   eyebrow(`${String(idx).padStart(2, "0")} — ${project.campaign}`, 44, py);
   doc.font("serif").fontSize(30).fillColor(CHARCOAL).text(project.name, 44, py + 16);

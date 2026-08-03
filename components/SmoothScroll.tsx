@@ -16,11 +16,16 @@ export default function SmoothScroll() {
     gsap.ticker.add(raf);
     gsap.ticker.lagSmoothing(0);
 
-    // Anchor navigation glides instead of jumping.
+    // Same-page anchor navigation glides instead of jumping; cross-page
+    // hash links (e.g. /#about from a gallery) navigate normally.
     const onClick = (e: MouseEvent) => {
-      const anchor = (e.target as Element | null)?.closest?.('a[href^="#"]');
-      if (!anchor) return;
-      const target = document.querySelector(anchor.getAttribute("href") ?? "");
+      const anchor = (e.target as Element | null)?.closest?.('a[href*="#"]') as
+        | HTMLAnchorElement
+        | null;
+      if (!anchor || !anchor.hash) return;
+      const url = new URL(anchor.href);
+      if (url.pathname !== window.location.pathname) return;
+      const target = document.querySelector(url.hash);
       if (!target) return;
       e.preventDefault();
       lenis.scrollTo(target as HTMLElement, { duration: 1.6 });
